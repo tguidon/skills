@@ -16,7 +16,19 @@ Create the product-specific layer that pairs with a reusable iOS design playbook
 
 ## Interview
 
-Interview in short rounds. Ask one to three related questions per round. Offer concrete options and a recommended default when the user lacks an answer.
+Interview in short rounds. Ask one to three related questions per round.
+
+Use structured multiple-choice questions for every interview prompt:
+
+- Use `request_user_input` when the tool is available.
+- Ask one to three questions in each tool call.
+- Give each question two or three mutually exclusive choices.
+- Put the recommended choice first. Add `(Recommended)` to its label.
+- Keep each label between one and five words.
+- Explain the effect or trade-off of each choice in one sentence.
+- Do not add an `Other` choice. The client supplies a free-form `Other` response.
+- If the tool is unavailable, show the same choices in plain text. Tell the user that they can type a custom answer.
+- If exact text is required, offer useful starter choices. Let the free-form response collect the exact value.
 
 Ask only unresolved questions. Use existing product documents, code, and prior conversation before you ask.
 

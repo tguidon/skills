@@ -14,6 +14,8 @@ Use it when an agent designs, implements, refactors, or reviews a native interfa
 
 Runs a short product interview and creates `PRODUCT-THEME.md`. The theme adds product character without replacing the shared playbook.
 
+Each prompt offers two or three choices. The recommended choice appears first, and the interface also accepts a custom answer.
+
 Use it when a new app needs direction or an existing theme needs a deliberate revision.
 
 ## Install with symlinks
