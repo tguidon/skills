@@ -18,6 +18,14 @@ Each prompt offers two or three choices. The recommended choice appears first. T
 
 Use it when a new app needs direction or an existing theme needs a deliberate revision.
 
+### `capture-ios-product-theme`
+
+Infers the core design language of an existing app from code, assets, reusable components, and rendered behavior.
+
+It also detects bounded feature, content, and context themes. It writes the durable result into `PRODUCT-THEME.md` for the shared playbook.
+
+Use it before substantial design work when an implemented app lacks reliable product-theme guidance.
+
 ## Project setup
 
 ### `sync-project-skill-guidance`
@@ -35,6 +43,7 @@ Run these commands from this repository:
 ```sh
 ln -s "$(pwd)/apply-ios-design-direction" "${CODEX_HOME:-$HOME/.codex}/skills/apply-ios-design-direction"
 ln -s "$(pwd)/create-ios-product-theme" "${CODEX_HOME:-$HOME/.codex}/skills/create-ios-product-theme"
+ln -s "$(pwd)/capture-ios-product-theme" "${CODEX_HOME:-$HOME/.codex}/skills/capture-ios-product-theme"
 ln -s "$(pwd)/sync-project-skill-guidance" "${CODEX_HOME:-$HOME/.codex}/skills/sync-project-skill-guidance"
 ```
 
@@ -75,5 +84,6 @@ Validate changed skills before you commit:
 ```sh
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py apply-ios-design-direction
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py create-ios-product-theme
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py capture-ios-product-theme
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py sync-project-skill-guidance
 ```

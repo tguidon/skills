@@ -1,0 +1,4 @@
+interface:
+  display_name: "Capture iOS Product Theme"
+  short_description: "Infer themes from an existing iOS app"
+  default_prompt: "Use $capture-ios-product-theme to infer the current app design language and create PRODUCT-THEME.md."

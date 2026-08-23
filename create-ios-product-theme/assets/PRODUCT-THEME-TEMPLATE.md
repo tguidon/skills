@@ -28,6 +28,27 @@ This file gives one product a distinct character within its shared `DESIGN.md` p
 
 **Avoid:** [Three to five opposing adjectives]
 
+## Theme topology
+
+**Core theme:** [Rules that govern the whole product]
+
+**Inheritance rule:** [Rules that every scoped theme keeps]
+
+| Theme | Kind | Scope or trigger | Permitted replacements |
+|---|---|---|---|
+| [Theme name] | [Feature, content, or context] | [Boundary] | [Roles that can change] |
+
+Write “No scoped themes” when the product uses only its core theme.
+
+### [Scoped theme name]
+
+- **Scope:** [Feature, content type, or temporary context]
+- **Trigger:** [Condition that activates the theme]
+- **Inherits:** [Core roles and component anatomy that remain]
+- **Overrides:** [Accent, imagery, surface, type, motion, or another permitted role]
+- **Invariants:** [Semantics, behavior, and accessibility that cannot change]
+- **Transition:** [Entry, exit, and fallback behavior]
+
 ## Information hierarchy
 
 **Primary signal:** [First information to notice]

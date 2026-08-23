@@ -14,7 +14,9 @@ Use the shared playbook as a design decision tool. Preserve native behavior and 
 3. Read the relevant product documents and interface code.
 4. Treat the app's current system components as evidence, not as permanent design truth.
 
-If the app has no product theme, use the playbook's exact 70/20/10 default. Do not invent product adjectives, signature colors, custom shapes, or expressive motion. Suggest `$create-ios-product-theme` as a separate next step.
+If the app has no product theme, use the playbook's exact 70/20/10 default. Do not invent product adjectives, signature colors, custom shapes, or expressive motion.
+
+For an implemented app with a stable visual language, suggest `$capture-ios-product-theme` before substantial visual changes. For a new app or deliberate revision, suggest `$create-ios-product-theme`.
 
 Use this priority when directions conflict:
 

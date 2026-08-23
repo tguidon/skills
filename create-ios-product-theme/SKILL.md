@@ -14,6 +14,8 @@ Create the product-specific layer that pairs with a reusable iOS design playbook
 3. If `DESIGN.md` is absent, explain that the theme will lack its foundation. Continue only if the user wants a standalone theme.
 4. Ask where to save the file only when the user requests a name other than `PRODUCT-THEME.md` or multiple candidate roots exist.
 
+If an implemented app already has a meaningful visual language, use `$capture-ios-product-theme` when the user wants to preserve it. Continue here when the user wants new direction or an owner-led revision.
+
 ## Interview
 
 Interview in short rounds. Ask one to three related questions per round.
@@ -51,6 +53,7 @@ Resolve these items:
 - Three to five character words.
 - Three to five opposing words.
 - The emotional difference between routine, important, and celebratory moments.
+- The boundary between the core product theme and any feature, content, or context themes.
 
 If the user names a reference app, ask which qualities matter. Translate those qualities into independent rules. Do not require the team to know the reference app.
 
@@ -102,6 +105,7 @@ After the interview:
 6. Record rules that an agent can observe in a rendered interface.
 7. Give each signature pattern a job, anatomy, variation range, state set, and restraint.
 8. Record each playbook exception with its reason and affected scope.
+9. Give each scoped theme a trigger, inheritance rule, permitted replacements, invariants, and fallback behavior.
 
 Do not edit `DESIGN.md` unless the user asks. If the interview reveals a reusable foundation rule, propose that change separately.
 
@@ -115,6 +119,7 @@ Before delivery, make sure that:
 - Custom components explain meaning or task flow.
 - Motion has a purpose and a reduced-motion replacement.
 - iPhone and iPad share anatomy but use suitable compositions.
+- Each scoped theme inherits more than it replaces.
 - The theme does not override a playbook `MUST`.
 - No bracketed prompt or unresolved placeholder remains.
 - The document gives enough direction to design one unfamiliar feature.
