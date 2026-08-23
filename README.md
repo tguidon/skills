@@ -6,7 +6,7 @@ Personal Codex skills that stay versioned in this repository and load through lo
 
 ### `apply-ios-design-direction`
 
-Applies and reviews a reusable iOS 26+ design playbook. It covers HIG, Liquid Glass, hierarchy, color, motion, accessibility, adaptive iPhone and iPad layouts, system surfaces, and custom components.
+Applies and reviews a reusable iOS 26+ design playbook. It covers HIG, Liquid Glass, hierarchy, color, motion, accessibility, adaptive layouts, system surfaces, and custom components.
 
 Use it when an agent designs, implements, refactors, or reviews a native interface.
 
@@ -14,9 +14,19 @@ Use it when an agent designs, implements, refactors, or reviews a native interfa
 
 Runs a short product interview and creates `PRODUCT-THEME.md`. The theme adds product character without replacing the shared playbook.
 
-Each prompt offers two or three choices. The recommended choice appears first, and the interface also accepts a custom answer.
+Each prompt offers two or three choices. The recommended choice appears first. The interface also accepts a custom answer.
 
 Use it when a new app needs direction or an existing theme needs a deliberate revision.
+
+## Project setup
+
+### `sync-project-skill-guidance`
+
+Adds relevant skill rules to a project `AGENTS.md`. It preserves existing guidance and owns only a marked section.
+
+Each skill can register concise project guidance in `agents/project-guidance.md`. The sync skill discovers these files automatically.
+
+Use it when a project needs persistent skill rules or when registered guidance changes.
 
 ## Install with symlinks
 
@@ -25,28 +35,45 @@ Run these commands from this repository:
 ```sh
 ln -s "$(pwd)/apply-ios-design-direction" "${CODEX_HOME:-$HOME/.codex}/skills/apply-ios-design-direction"
 ln -s "$(pwd)/create-ios-product-theme" "${CODEX_HOME:-$HOME/.codex}/skills/create-ios-product-theme"
+ln -s "$(pwd)/sync-project-skill-guidance" "${CODEX_HOME:-$HOME/.codex}/skills/sync-project-skill-guidance"
 ```
 
-Codex then reads each skill directly from this repository. A pull or local edit updates the installed skill without another install step.
+Codex reads each skill directly from this repository. A pull or local edit updates the installed skill without another install step.
 
-## Project guidance
+## Add project guidance
 
-Add this short contract to a project's `AGENTS.md` when the project uses the system:
+Invoke `$sync-project-skill-guidance` from a project. The skill previews its change before it updates the applicable `AGENTS.md`.
+
+The managed section looks like this:
 
 ```md
+<!-- codex-skills:managed:start -->
+
 ## iOS design direction
 
 - Use `$apply-ios-design-direction` for iPhone and iPad interface work.
-- Read `PRODUCT-THEME.md` after the shared playbook when the app has one.
-- Use `$create-ios-product-theme` when the product theme is missing or needs revision.
-- A product theme can replace a playbook `SHOULD` or select a `MAY`. It cannot override a `MUST`.
+
+<!-- codex-skills:managed:end -->
 ```
+
+Text outside these markers stays unchanged. A repeated sync updates the same section instead of adding a duplicate.
+
+Skill discovery does not require an `AGENTS.md` entry. Codex can select installed skills from their frontmatter descriptions.
+
+Use project guidance for persistent rules, coordination between skills, and project-specific expectations.
+
+## Add another skill
+
+Follow the root `AGENTS.md` when you add or revise a skill.
+
+If a skill needs persistent project rules, add `agents/project-guidance.md` to that skill. The sync skill then discovers it automatically.
 
 ## Development
 
-Validate a skill before you commit changes:
+Validate changed skills before you commit:
 
 ```sh
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py apply-ios-design-direction
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py create-ios-product-theme
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py sync-project-skill-guidance
 ```

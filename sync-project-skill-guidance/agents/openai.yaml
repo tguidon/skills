@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Project Skill Guidance"
+  short_description: "Safely merge skill rules into AGENTS.md"
+  default_prompt: "Use $sync-project-skill-guidance to add relevant skill guidance to the project AGENTS.md."
