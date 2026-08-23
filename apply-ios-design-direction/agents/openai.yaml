@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply iOS Design Direction"
+  short_description: "Guide and review native iOS product design"
+  default_prompt: "Use $apply-ios-design-direction to design or review this iOS feature."

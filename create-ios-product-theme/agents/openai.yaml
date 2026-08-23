@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create iOS Product Theme"
+  short_description: "Turn product intent into an iOS theme"
+  default_prompt: "Use $create-ios-product-theme to interview me and create a product theme for this app."
