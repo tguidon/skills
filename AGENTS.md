@@ -2,7 +2,7 @@
 
 ## Scope
 
-This repository contains personal Codex skills. Each top-level skill folder is the versioned source for one skill.
+This repository contains personal Codex skills. Each folder under `skills/` is the versioned source for one skill.
 
 ## Create or revise a skill
 

@@ -1,6 +1,6 @@
 # My Skills
 
-Personal Codex skills that stay versioned in this repository and load through local symlinks.
+Personal Codex skills that stay versioned here and install only in selected projects.
 
 ## iOS design-direction system
 
@@ -36,18 +36,40 @@ Each skill can register concise project guidance in `agents/project-guidance.md`
 
 Use it when a project needs persistent skill rules or when registered guidance changes.
 
-## Install with symlinks
+## Install in a project
 
-Run these commands from this repository:
+Run these commands from the target project root.
+
+First, list the available skills:
 
 ```sh
-ln -s "$(pwd)/apply-ios-design-direction" "${CODEX_HOME:-$HOME/.codex}/skills/apply-ios-design-direction"
-ln -s "$(pwd)/create-ios-product-theme" "${CODEX_HOME:-$HOME/.codex}/skills/create-ios-product-theme"
-ln -s "$(pwd)/capture-ios-product-theme" "${CODEX_HOME:-$HOME/.codex}/skills/capture-ios-product-theme"
-ln -s "$(pwd)/sync-project-skill-guidance" "${CODEX_HOME:-$HOME/.codex}/skills/sync-project-skill-guidance"
+npx skills add tguidon/skills --list
 ```
 
-Codex reads each skill directly from this repository. A pull or local edit updates the installed skill without another install step.
+Then install the complete iOS design-direction system:
+
+```sh
+npx skills add tguidon/skills \
+  --agent codex \
+  --skill apply-ios-design-direction \
+  --skill create-ios-product-theme \
+  --skill capture-ios-product-theme \
+  --skill sync-project-skill-guidance \
+  --copy \
+  --yes
+```
+
+Project scope is the default. The command installs the skills in `.agents/skills/`.
+
+Do not add `--global`. Commit `.agents/skills/` and `skills-lock.json` when a project team must use the same versions.
+
+Update the installed project copies after this repository changes:
+
+```sh
+npx skills update --project
+```
+
+For local skill development, replace `tguidon/skills` with `/Users/taylorguidon/Developer/skills`. Omit `--copy` and select the symlink method.
 
 ## Add project guidance
 
@@ -82,8 +104,8 @@ If a skill needs persistent project rules, add `agents/project-guidance.md` to t
 Validate changed skills before you commit:
 
 ```sh
-python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py apply-ios-design-direction
-python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py create-ios-product-theme
-python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py capture-ios-product-theme
-python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py sync-project-skill-guidance
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/apply-ios-design-direction
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/create-ios-product-theme
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/capture-ios-product-theme
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/sync-project-skill-guidance
 ```
