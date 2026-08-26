@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cloudflare iOS API Architecture"
+  short_description: "Guide reusable Cloudflare iOS API architecture"
+  default_prompt: "Use $cloudflare-ios-api-architecture to design or review this iOS and Cloudflare API change."
+
+policy:
+  allow_implicit_invocation: true

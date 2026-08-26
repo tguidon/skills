@@ -1,6 +1,34 @@
 # My Skills
 
-Personal Codex skills that stay versioned here and install only in selected projects.
+Personal Codex skills that stay versioned here and install globally or in selected projects.
+
+## Cloudflare iOS API architecture
+
+### `cloudflare-ios-api-architecture`
+
+Applies and reviews a reusable architecture for native iOS apps with a Cloudflare Worker API.
+
+It covers normal JSON APIs, authentication, D1, SwiftData caching, offline work, provider-neutral AI streaming, AI context, and Cloudflare service evolution.
+
+Use it for architecture, implementation, and review work. Codex can select it implicitly from its focused description.
+
+### `cloudflare-ios-project-architecture`
+
+Creates or updates a concise `docs/architecture-profile.md` or a focused architecture decision record. It also maintains the architecture link in `docs/README.md`.
+
+It reads `$cloudflare-ios-api-architecture` first. It records only project selections, deviations, document links, and open decisions.
+
+Install these as personal skills when their generic guidance must stay outside project repositories:
+
+```sh
+npx skills add tguidon/skills \
+  --agent codex \
+  --skill cloudflare-ios-api-architecture \
+  --skill cloudflare-ios-project-architecture \
+  --global \
+  --copy \
+  --yes
+```
 
 ## iOS design-direction system
 
@@ -108,4 +136,6 @@ python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/ap
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/create-ios-product-theme
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/capture-ios-product-theme
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/sync-project-skill-guidance
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/cloudflare-ios-api-architecture
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/cloudflare-ios-project-architecture
 ```
