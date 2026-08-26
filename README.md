@@ -12,7 +12,7 @@ It covers normal JSON APIs, authentication, D1, SwiftData caching, offline work,
 
 Use it for architecture, implementation, and review work. Codex can select it implicitly from its focused description.
 
-### `cloudflare-ios-project-architecture`
+### `record-project-architecture`
 
 Creates or updates a concise `docs/architecture-profile.md` or a focused architecture decision record. It also maintains the architecture link in `docs/README.md`.
 
@@ -24,7 +24,7 @@ Install these as personal skills when their generic guidance must stay outside p
 npx skills add tguidon/skills \
   --agent codex \
   --skill cloudflare-ios-api-architecture \
-  --skill cloudflare-ios-project-architecture \
+  --skill record-project-architecture \
   --global \
   --copy \
   --yes
@@ -56,7 +56,7 @@ Use it before substantial design work when an implemented app lacks reliable pro
 
 ## Project setup
 
-### `sync-project-skill-guidance`
+### `sync-skill-guidance`
 
 Adds relevant skill rules to a project `AGENTS.md`. It preserves existing guidance and owns only a marked section.
 
@@ -82,7 +82,7 @@ npx skills add tguidon/skills \
   --skill apply-ios-design-direction \
   --skill create-ios-product-theme \
   --skill capture-ios-product-theme \
-  --skill sync-project-skill-guidance \
+  --skill sync-skill-guidance \
   --copy \
   --yes
 ```
@@ -101,7 +101,7 @@ For local skill development, replace `tguidon/skills` with `/Users/taylorguidon/
 
 ## Add project guidance
 
-Invoke `$sync-project-skill-guidance` from a project. The skill previews its change before it updates the applicable `AGENTS.md`.
+Invoke `$sync-skill-guidance` from a project. The skill previews its change before it updates the applicable `AGENTS.md`.
 
 The managed section looks like this:
 
@@ -135,7 +135,7 @@ Validate changed skills before you commit:
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/apply-ios-design-direction
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/create-ios-product-theme
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/capture-ios-product-theme
-python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/sync-project-skill-guidance
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/sync-skill-guidance
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/cloudflare-ios-api-architecture
-python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/cloudflare-ios-project-architecture
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/record-project-architecture
 ```

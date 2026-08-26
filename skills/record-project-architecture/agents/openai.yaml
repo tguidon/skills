@@ -1,0 +1,7 @@
+interface:
+  display_name: "Record Project Architecture"
+  short_description: "Record a project architecture profile or ADR"
+  default_prompt: "Use $record-project-architecture to create or update this project's Cloudflare iOS architecture profile."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,7 +1,0 @@
-interface:
-  display_name: "Cloudflare iOS Project Architecture"
-  short_description: "Create a concise project architecture profile"
-  default_prompt: "Use $cloudflare-ios-project-architecture to create or update this project's Cloudflare iOS architecture profile."
-
-policy:
-  allow_implicit_invocation: true

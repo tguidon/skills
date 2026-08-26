@@ -1,9 +1,9 @@
 ---
-name: cloudflare-ios-project-architecture
+name: record-project-architecture
 description: Create or update a small project architecture profile or focused ADR for a repository that adopts cloudflare-ios-api-architecture. Use when Codex records selected identity, API, data, offline, AI, and Cloudflare options without copying the generic architecture into the project. Do not use for ordinary implementation or broad product documentation.
 ---
 
-# Create a Cloudflare iOS Project Architecture Record
+# Record Project Architecture
 
 Create the small project-specific layer that pairs with `$cloudflare-ios-api-architecture`.
 
@@ -108,7 +108,7 @@ An ADR records one durable decision. It does not replace the project profile.
 
 ## Preserve instruction boundaries
 
-Do not edit `AGENTS.md` unless the user requests persistent agent guidance. Suggest `$sync-project-skill-guidance` when the architecture skill needs a durable pointer.
+Do not edit `AGENTS.md` unless the user requests persistent agent guidance. Suggest `$sync-skill-guidance` when the architecture skill needs a durable pointer.
 
 Do not delete generic project documents during profile creation. Remove or migrate them only when the user explicitly requests that work.
 

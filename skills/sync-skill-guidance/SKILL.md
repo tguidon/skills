@@ -1,9 +1,9 @@
 ---
-name: sync-project-skill-guidance
-description: Safely add or refresh skill guidance in a project AGENTS.md without replacing existing instructions. Use when Codex configures a repository for installed skills, updates a managed skills section, or adds persistent skill rules.
+name: sync-skill-guidance
+description: Safely add or refresh installed-skill guidance in a project AGENTS.md without replacing existing instructions. Use when Codex configures a repository for installed skills, updates a managed skills section, or adds persistent skill rules.
 ---
 
-# Sync Project Skill Guidance
+# Sync Skill Guidance
 
 Add concise skill rules to the active project. Preserve all human-authored instructions outside the managed block.
 

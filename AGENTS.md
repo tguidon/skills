@@ -39,7 +39,7 @@ Add `agents/project-guidance.md` only when a skill needs persistent project rule
 - Do not copy the skill workflow into the fragment.
 - Do not add managed-block markers. The sync script owns those markers.
 
-`$sync-project-skill-guidance` discovers these fragments without a central registry.
+`$sync-skill-guidance` discovers these fragments without a central registry.
 
 ## Protect project instructions
 

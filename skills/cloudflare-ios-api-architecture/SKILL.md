@@ -54,7 +54,7 @@ Keep normal JSON API calls separate from AI stream decoding. Share session heade
 
 Do not copy these reference documents into a repository. Record only selected options, deviations, project document links, and unresolved decisions.
 
-Use `$cloudflare-ios-project-architecture` when the user asks to create or update that project record.
+Use `$record-project-architecture` when the user asks to create or update that project record.
 
 ## Review existing work
 
