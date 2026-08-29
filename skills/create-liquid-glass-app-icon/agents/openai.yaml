@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Liquid Glass App Icon"
+  short_description: "Create layered Apple app icons for Liquid Glass"
+  default_prompt: "Use $create-liquid-glass-app-icon to create a Liquid Glass app icon from this design direction."

@@ -38,6 +38,12 @@ Applies and reviews a reusable iOS 26+ design playbook. It covers HIG, Liquid Gl
 
 Use it when an agent designs, implements, refactors, or reviews a native interface.
 
+### `create-liquid-glass-app-icon`
+
+Creates or revises a layered Apple app icon from supplied design direction. It produces aligned SVG or PNG source layers, an Icon Composer `.icon` package, Xcode integration, and device-sized validation.
+
+Use it when an app needs a Liquid Glass icon. It does not run a general interface or code review.
+
 ### `create-ios-product-theme`
 
 Runs a short product interview and creates `PRODUCT-THEME.md`. The theme adds product character without replacing the shared playbook.
@@ -80,6 +86,7 @@ Then install the complete iOS design-direction system:
 npx skills add tguidon/skills \
   --agent codex \
   --skill apply-ios-design-direction \
+  --skill create-liquid-glass-app-icon \
   --skill create-ios-product-theme \
   --skill capture-ios-product-theme \
   --skill sync-skill-guidance \
@@ -133,6 +140,7 @@ Validate changed skills before you commit:
 
 ```sh
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/apply-ios-design-direction
+python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/create-liquid-glass-app-icon
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/create-ios-product-theme
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/capture-ios-product-theme
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/sync-skill-guidance
